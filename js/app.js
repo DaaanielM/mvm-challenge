@@ -68,8 +68,17 @@ const descuentosClientesOrdenados = descuentosClientes.sort(
 	}
 );
 
+descuentosClientesOrdenados.forEach((descuento) => {
+	console.log(
+		`El cliente: ${descuento.cliente}, tuvo un total de descuento en los últimos 6 meses de: ${descuento.valor}%`
+	);
+});
+
 document.querySelector('#resultado').innerHTML = JSON.stringify(
 	descuentosClientesOrdenados
 );
 
+alert(
+	'En la consola esta más detallada la respuesta del descuento, presione ctrl + shift + i y vaya a console.'
+);
 // ------------------ Descuento -------------------
