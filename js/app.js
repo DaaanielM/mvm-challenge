@@ -43,10 +43,12 @@ clientes.forEach((cliente, index) => {
 			datoDescuento.valor += porcentajeCuatro;
 		} else if (consumo < 100 && consumo >= 50) {
 			datoDescuento.valor += porcentajeTres;
-		} else if (consumo <= 299 && consumo >= 100) {
+		} else if (consumo <= 200 && consumo >= 100) {
 			datoDescuento.valor += porcentajeDos;
 		} else if (consumo >= 300) {
 			datoDescuento.valor += porcentajeUno;
+		} else {
+			datoDescuento.valor += 0;
 		}
 	});
 
@@ -78,7 +80,4 @@ document.querySelector('#resultado').innerHTML = JSON.stringify(
 	descuentosClientesOrdenados
 );
 
-alert(
-	'En la consola esta más detallada la respuesta del descuento, presione ctrl + shift + i y vaya a console.'
-);
 // ------------------ Descuento -------------------
